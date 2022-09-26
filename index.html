@@ -12,6 +12,7 @@
         <div class="hand hour-hand"></div>
         <div class="hand min-hand"></div>
         <div class="hand second-hand"></div>
+        <div class="circle"></div>
       </div>
     </div>
 
@@ -55,18 +56,51 @@
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
-
+    
     .hand {
-      width: 50%;
+        width: 50%;
       height: 6px;
       background: black;
       position: absolute;
       top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg)  ;
+      transition: all 0.5s;
+    }
+    .circle{
+        width: 25px;
+      height: width;
+      position: absolute;
+        background: #EFEFEF;
+        height: 23px;
+        top: 48%;
+        left:46%;
+        border-radius: 50%;
+        z-index: 1;
+
+    }
+    .hour-hand{
+        width: 35%; 
+        left: 15%;
+      height: 9px;
+      border-radius: 12px;
+    }
+    .min-hand{
+        height: 6px;
+      border-radius: 12px;
+      width: 45%; 
+        left: 5%;
+    }
+    .second-hand{
+        height: 4px;
+        
+        border-radius: 12px;  
+        
     }
 
   </style>
 
-  <script>
+  <script src="index.js">
 
 
   </script>
